@@ -1,25 +1,26 @@
-import { Outlet, useParams } from "react-router-dom";
-import Popeye from "./popeye";
-import Spinach from "./spinach";
+import { useParams } from "react-router-dom";
+
 import DefaultProfile from "./defaultProfile";
+import PageOneElement from "./pageOne";
+import PageTwoElement from "./pageTwo";
 
 const Profile = () => {
   const { name } = useParams();
+
+  console.log(name);
 
   return (
     <div>
       <h1>Hello from profile page!</h1>
       <p>So, how are you?</p>
-      <hr />
       <h2>The profile visited is here:</h2>
-      {name === "popeye" ? (
-        <Popeye />
-      ) : name === "spinach" ? (
-        <Spinach />
+      {name === "pageone" ? (
+        <PageOneElement />
+      ) : name === "pagetwo" ? (
+        <PageTwoElement />
       ) : (
         <DefaultProfile />
       )}
-      <Outlet />
     </div>
   );
 };

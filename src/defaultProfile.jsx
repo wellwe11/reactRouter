@@ -1,5 +1,9 @@
 const DefaultProfile = () => {
-  return <p>Oh, nothing to see here!</p>;
+  return (
+    <div>
+      <h1>This is the default page</h1>
+    </div>
+  );
 };
 
 export default DefaultProfile;
